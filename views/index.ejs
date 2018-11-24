@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Static Thrust Estimator</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="diameter" type="number" min="0" class="ghost-input" placeholder="Enter Propeller Diameter(in inch)" required>
+          <input name="pitch" type="number" min="0" class="ghost-input" placeholder="Enter Propeller Pitch(in inch)" required>
+          <input name="rpm" type="text" min="0" class="ghost-input" placeholder="Enter Propeller RPM" required>
+          <input type="submit" class="ghost-button" value="Get Static Thrust">
+        </form>
+        <% if(thrust !== null){ %>
+                <p><%= thrust %></p>
+              <% } %>
+      </fieldset>
+    </div>
+  </body>
+</html>
